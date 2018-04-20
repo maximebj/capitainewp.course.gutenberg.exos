@@ -1,0 +1,38 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.wp-block-capitainewp-ingredients {
+  display: -ms-flexbox;
+  display: flex; }
+  .wp-block-capitainewp-ingredients .wp-block-capitainewp-ingredients__content {
+    -ms-flex: 3;
+        flex: 3; }
+  .wp-block-capitainewp-ingredients .wp-block-capitainewp-ingredients__list {
+    -ms-flex: 2;
+        flex: 2;
+    list-style-type: none;
+    margin: 0 4px 8px 4px;
+    min-width: 35%;
+    background: #FDFADE;
+    border-radius: 4px;
+    border: 1px solid #EFE8CB;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); }
+  .wp-block-capitainewp-ingredients li {
+    position: relative;
+    padding: 8px 10px 8px 40px; }
+  .wp-block-capitainewp-ingredients li + li {
+    border-top: 1px solid #EFE8CB; }
+  .wp-block-capitainewp-ingredients li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 9px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #EFE8CB;
+    border-radius: 3px; }

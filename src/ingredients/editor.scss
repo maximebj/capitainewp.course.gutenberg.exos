@@ -1,0 +1,15 @@
+.edit-post-visual-editor {
+	.wp-block-capitainewp-ingredients ul {
+		list-style-type: none; // forcer le retrait des puces dans la liste
+	}
+}
+
+// nos colonnes sont absorbées en enfant de RichText, il faut donc ajuster
+.wp-block-capitainewp-ingredients {
+	.blocks-rich-text:first-child {
+		flex: 3;
+	}
+	.blocks-rich-text:last-child {
+		flex: 2;
+	}
+}
