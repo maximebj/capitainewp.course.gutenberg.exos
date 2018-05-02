@@ -3,7 +3,6 @@ const { __ } = wp.i18n
 
 const { RichText, UrlInput } = wp.blocks
 const { Dashicon, IconButton } = wp.components
-const { Fragment } = wp.element
 
 export default class Block extends Component {
 
