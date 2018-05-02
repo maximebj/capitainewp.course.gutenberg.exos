@@ -11,6 +11,7 @@ registerBlockType(
 	'capitainewp/ingredients',
 	{
 		title: __( "Ingrédients"),
+		description: __("Une belle liste d'ingrédients pour vos recettes de cuisine"),
 		icon: 'carrot',
 		category: 'common',
 		keywords: [

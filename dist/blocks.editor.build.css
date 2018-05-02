@@ -14,3 +14,14 @@
 .wp-block-capitainewp-ingredients .blocks-rich-text:last-child {
   -ms-flex: 2;
       flex: 2; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.wp-block-capitainewp-button div {
+  display: inline-block; }
+
+.wp-block-capitainewp-button form {
+  margin: 20px auto 0; }
