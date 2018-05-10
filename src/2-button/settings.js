@@ -16,10 +16,6 @@ const {
 
 export default class Settings extends Component {
 
-	constructor( props ) {
-		super( props )
-	}
-
 	render() {
 
 		const { target, padding, textSize, textColor, backgroundColor, withRadius, radius, setAttributes } = this.props

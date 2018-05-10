@@ -8,10 +8,6 @@ const {
 
 export default class Toolbar extends Component {
 
-	constructor( props ) {
-		super( props )
-	}
-
 	render() {
 
 		const { alignment, setAttributes } = this.props

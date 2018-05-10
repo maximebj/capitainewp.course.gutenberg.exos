@@ -31,10 +31,7 @@ registerBlockType("capitainewp/button", {
       attribute: "href",
     },
     target: {
-      type: "string",
-      source: "attribute",
-      selector: "a",
-      attribute: "target",
+      type: "boolean",
     },
     alignment: {
 			type: 'string',

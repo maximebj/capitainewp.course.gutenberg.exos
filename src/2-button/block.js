@@ -6,10 +6,6 @@ const { Dashicon, IconButton } = wp.components
 
 export default class Block extends Component {
 
-	constructor( props ) {
-		super( props )
-	}
-
 	render() {
 
 		const { attributes: { text, url, target, alignment, padding, textSize, textColor, backgroundColor, withRadius, radius}, className, setAttributes, isSelected } = this.props
