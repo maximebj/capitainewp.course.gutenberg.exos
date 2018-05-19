@@ -19,7 +19,7 @@ function capitainewp_exos_block_assets() {
 	wp_enqueue_style(
 		'capitainewp-exos-style-css',
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
-		array( 'wp-blocks' )
+		array( 'wp-editor', 'wp-blocks' )
 	);
 }
 add_action( 'enqueue_block_assets', 'capitainewp_exos_block_assets' );
@@ -31,7 +31,7 @@ function capitainewp_exos_editor_assets() {
 	wp_enqueue_script(
 		'capitainewp-exos-block',
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ),
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' )
+		array( 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element' )
 	);
 
 	// Styles.
