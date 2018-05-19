@@ -1,10 +1,9 @@
-const { Component } = wp.element
 const { __ } = wp.i18n
-
+const { Component } = wp.element
 const {
 	BlockControls,
 	BlockAlignmentToolbar,
-} = wp.blocks
+} = wp.editor
 
 export default class Toolbar extends Component {
 

@@ -1,8 +1,7 @@
-const { Component } = wp.element
 const { __ } = wp.i18n
-
-const { RichText, UrlInput } = wp.blocks
+const { RichText, UrlInput } = wp.editor
 const { Dashicon, IconButton } = wp.components
+const { Component } = wp.element
 
 export default class Block extends Component {
 
