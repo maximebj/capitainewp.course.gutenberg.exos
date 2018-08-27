@@ -7,11 +7,11 @@
 .edit-post-visual-editor .wp-block-capitainewp-ingredients ul {
   list-style-type: none; }
 
-.wp-block-capitainewp-ingredients .blocks-rich-text:first-child {
+.wp-block-capitainewp-ingredients .editor-rich-text:first-child {
   -ms-flex: 3;
       flex: 3; }
 
-.wp-block-capitainewp-ingredients .blocks-rich-text:last-child {
+.wp-block-capitainewp-ingredients .editor-rich-text:last-child {
   -ms-flex: 2;
       flex: 2; }
 /**
