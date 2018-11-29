@@ -14,7 +14,6 @@
     -ms-flex: 2;
         flex: 2;
     list-style-type: none;
-    margin: 0 4px 8px 4px;
     min-width: 35%;
     background: #FDFADE;
     border-radius: 4px;
@@ -23,15 +22,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); }
   .wp-block-capitainewp-ingredients li {
     position: relative;
-    padding: 8px 10px 8px 40px; }
+    padding: 8px 10px 8px 40px;
+    line-height: 42px;
+    margin: 0; }
   .wp-block-capitainewp-ingredients li + li {
     border-top: 1px solid #EFE8CB; }
   .wp-block-capitainewp-ingredients li:before {
     content: '';
     display: block;
     position: absolute;
-    left: 9px;
-    top: 15px;
+    left: 10px;
+    top: 20px;
     width: 16px;
     height: 16px;
     border: 2px solid #EFE8CB;

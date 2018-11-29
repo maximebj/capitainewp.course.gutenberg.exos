@@ -19,7 +19,7 @@ function capitainewp_exos_block_assets() {
 	wp_enqueue_style(
 		'capitainewp-exos-style-css',
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
-		array( 'wp-editor', 'wp-blocks' )
+		array( 'wp-editor' )
 	);
 }
 add_action( 'enqueue_block_assets', 'capitainewp_exos_block_assets' );

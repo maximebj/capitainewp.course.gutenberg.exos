@@ -4,8 +4,8 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.edit-post-visual-editor .wp-block-capitainewp-ingredients ul {
-  list-style-type: none; }
+.editor-block-list__block .wp-block-capitainewp-ingredients ul {
+  list-style-type: none !important; }
 
 .wp-block-capitainewp-ingredients .editor-rich-text:first-child {
   -ms-flex: 3;

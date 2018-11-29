@@ -1,5 +1,5 @@
 const { __ } = wp.i18n
-const { RichText, UrlInput } = wp.editor
+const { RichText, URLInput } = wp.editor
 const { Dashicon, IconButton } = wp.components
 const { Component } = wp.element
 
@@ -7,7 +7,7 @@ export default class Block extends Component {
 
 	render() {
 
-		const { attributes: { text, url, target, alignment, padding, textSize, textColor, backgroundColor, withRadius, radius}, className, setAttributes, isSelected } = this.props
+		const { attributes: { text, url, alignment, padding, textSize, textColor, backgroundColor, withRadius, radius}, className, setAttributes, isSelected } = this.props
 
 		return (
 			<p
@@ -38,20 +38,23 @@ export default class Block extends Component {
 				<br />
 
 				{ isSelected && (
-					<form className='blocks-button__inline-link'>
+					<form 
+						className='block-library-button__inline-link'
+						onSubmit={ ( event ) => event.preventDefault() }
+					>
 						<Dashicon icon="admin-links" />
-						<UrlInput
+						<URLInput
 							className="url"
 							value={ url }
 							onChange={ url => setAttributes( { url } ) }
 						/>
 						<IconButton
-              icon="editor-break"
-              label={ __( 'Appliquer' ) }
-              type="submit"
-            />
+							icon="editor-break"
+							label={ __( 'Appliquer' ) }
+							type="submit"
+						/>
 					</form>
-				)}
+				) }
 			</p>
 		)
 	}

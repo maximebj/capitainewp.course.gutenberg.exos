@@ -2,14 +2,12 @@ const { __ } = wp.i18n
 const { Component } = wp.element
 
 const {
-	BlockControls,
 	InspectorControls,
-	ColorPalette,
+	PanelColorSettings,
 } = wp.editor
 
 const {
   PanelBody,
-	PanelColor,
 	ToggleControl,
 	RangeControl,
 } = wp.components
@@ -69,26 +67,23 @@ export default class Settings extends Component {
 
 				</PanelBody>
 
-				<PanelColor
-					title={ __( 'Couleur du texte' ) }
-					colorValue={ textColor }
+				<PanelColorSettings
+					title={ __( 'Couleurs' ) }
+					colorSettings={ [
+						{
+							value: textColor,
+							onChange: textColor => setAttributes( { textColor } ),
+							label: __( 'Couleur du texte' ),
+						},
+						{
+							value: backgroundColor,
+							onChange: backgroundColor => setAttributes( { backgroundColor } ),
+							label: __( 'Couleur du fond' ),
+						},
+					] }
 				>
-					<ColorPalette
-						value={ textColor }
-						onChange= { textColor => setAttributes( { textColor } ) }
-					/>
-				</PanelColor>
-
-				<PanelColor
-					title={ __( 'Couleur du fond' ) }
-					colorValue={ backgroundColor }
-				>
-					<ColorPalette
-						value={ backgroundColor }
-						onChange= { backgroundColor => setAttributes( { backgroundColor } ) }
-					/>
-				</PanelColor>
-
+				</PanelColorSettings>
+				
 			</InspectorControls>
 		)
 	}

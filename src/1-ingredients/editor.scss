@@ -1,6 +1,6 @@
-.edit-post-visual-editor {
+.editor-block-list__block {
 	.wp-block-capitainewp-ingredients ul {
-		list-style-type: none; // forcer le retrait des puces dans la liste
+		list-style-type: none !important; // forcer le retrait des puces dans la liste
 	}
 }
 
