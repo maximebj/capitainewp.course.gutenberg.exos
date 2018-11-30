@@ -81,8 +81,7 @@ export default class Settings extends Component {
 							label: __( 'Couleur du fond' ),
 						},
 					] }
-				>
-				</PanelColorSettings>
+				/>
 				
 			</InspectorControls>
 		)
