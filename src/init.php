@@ -17,14 +17,14 @@ function capitainewp_exos_register_assets() {
 
 	wp_register_style(
 		'capitainewp-exos',
-		plugins_url( 'dist/blocks.style.build.css' , __FILE__ ),
+		plugins_url( 'dist/blocks.style.build.css' , dirname( __FILE__ ) ),
 		is_admin() ? [ 'wp-editor' ] : null,
 		'1.0'
 	);
 
 	wp_register_script(
 		'capitainewp-exos',
-		plugins_url( 'dist/blocks.build.js', __FILE__ ),
+		plugins_url( 'dist/blocks.build.js', dirname( __FILE__ ) ),
 		[ 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element' ],
 		'1.0',
 		true
@@ -32,7 +32,7 @@ function capitainewp_exos_register_assets() {
 
 	wp_register_style(
 		'capitainewp-exos-editor',
-		plugins_url( 'dist/blocks.editor.build.css', __FILE__ ),
+		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ),
 		[ 'wp-edit-blocks' ],
 		'1.0'
 	);

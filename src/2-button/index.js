@@ -9,9 +9,9 @@ const { __ } = wp.i18n
 const { registerBlockType } = wp.blocks
 const { Fragment } = wp.element
 
-registerBlockType("capitainewp/button", {
-	title: __("Bouton amélioré"),
-	description: __("Un bouton amélioré avec pleins d'options"),
+registerBlockType( "capitainewp/button", {
+	title: __( "Bouton amélioré" ),
+	description: __( "Un bouton amélioré avec pleins d'options" ),
 	icon: "video-alt3",
 	category: "common",
 	keywords: [
