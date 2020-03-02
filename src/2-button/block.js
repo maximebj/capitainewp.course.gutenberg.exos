@@ -1,5 +1,5 @@
 const { __ } = wp.i18n
-const { RichText, URLInput } = wp.editor
+const { RichText, URLInput } = wp.blockEditor
 const { Dashicon, IconButton } = wp.components
 const { Component } = wp.element
 

@@ -3,7 +3,7 @@ const { Component } = wp.element
 const {
 	BlockControls,
 	BlockAlignmentToolbar,
-} = wp.editor
+} = wp.blockEditor
 
 export default class Toolbar extends Component {
 

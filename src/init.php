@@ -8,37 +8,42 @@
  * @package CGB
  */
 
-// Exit if accessed directly.
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function capitainewp_exos_block_assets() {
+function capitainewp_exos_register_assets() {
 
-	// Styles.
-	wp_enqueue_style(
-		'capitainewp-exos-style-css',
-		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ),
-		array( 'wp-editor' )
+	wp_register_style(
+		'capitainewp-exos',
+		plugins_url( 'dist/blocks.style.build.css' , __FILE__ ),
+		is_admin() ? [ 'wp-editor' ] : null,
+		'1.0'
+	);
+
+	wp_register_script(
+		'capitainewp-exos',
+		plugins_url( 'dist/blocks.build.js', __FILE__ ),
+		[ 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element' ],
+		'1.0',
+		true
+	);
+
+	wp_register_style(
+		'capitainewp-exos-editor',
+		plugins_url( 'dist/blocks.editor.build.css', __FILE__ ),
+		[ 'wp-edit-blocks' ],
+		'1.0'
+	);
+
+	register_block_type(
+		'capitainewpexo/blocks', array(
+			'style'         => 'capitainewp-exos',
+			'editor_script' => 'capitainewp-exos',
+			'editor_style'  => 'capitainewp-exos-editor',
+		)
 	);
 }
-add_action( 'enqueue_block_assets', 'capitainewp_exos_block_assets' );
 
-
-function capitainewp_exos_editor_assets() {
-
-	// Scripts.
-	wp_enqueue_script(
-		'capitainewp-exos-block',
-		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ),
-		array( 'wp-editor', 'wp-blocks', 'wp-i18n', 'wp-element' )
-	);
-
-	// Styles.
-	wp_enqueue_style(
-		'capitainewp-exos-block-editor',
-		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ),
-		array( 'wp-edit-blocks' )
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'capitainewp_exos_editor_assets' );
+add_action( 'init', 'capitainewp_exos_register_assets' );
