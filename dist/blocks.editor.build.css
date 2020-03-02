@@ -4,14 +4,14 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.editor-block-list__block .wp-block-capitainewp-ingredients ul {
+.editor-styles-wrapper .wp-block-capitainewp-ingredients ul {
   list-style-type: none !important; }
 
-.wp-block-capitainewp-ingredients .editor-rich-text:first-child {
+.editor-styles-wrapper .wp-block-capitainewp-ingredients .editor-rich-text:first-child {
   -ms-flex: 3;
       flex: 3; }
 
-.wp-block-capitainewp-ingredients .editor-rich-text:last-child {
+.editor-styles-wrapper .wp-block-capitainewp-ingredients .editor-rich-text:last-child {
   -ms-flex: 2;
       flex: 2; }
 /**
@@ -20,8 +20,8 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block-capitainewp-button div {
+.editor-styles-wrapper .wp-block-capitainewp-button div {
   display: inline-block; }
 
-.wp-block-capitainewp-button form {
+.editor-styles-wrapper .wp-block-capitainewp-button form {
   margin: 20px auto 0; }

@@ -1,15 +1,17 @@
-.editor-block-list__block {
+.editor-styles-wrapper {
 	.wp-block-capitainewp-ingredients ul {
 		list-style-type: none !important; // forcer le retrait des puces dans la liste
 	}
+
+	// nos colonnes sont absorbées en enfant de RichText, il faut donc ajuster
+	.wp-block-capitainewp-ingredients {
+		.editor-rich-text:first-child {
+			flex: 3;
+		}
+		.editor-rich-text:last-child {
+			flex: 2;
+		}
+	}
 }
 
-// nos colonnes sont absorbées en enfant de RichText, il faut donc ajuster
-.wp-block-capitainewp-ingredients {
-	.editor-rich-text:first-child {
-		flex: 3;
-	}
-	.editor-rich-text:last-child {
-		flex: 2;
-	}
-}
+
